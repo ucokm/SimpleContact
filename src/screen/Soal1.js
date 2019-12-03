@@ -52,10 +52,11 @@ export default class Soal1 extends PureComponent {
     lines.forEach((itemI, i) => {
       var pairs = itemI.split(';');
       pairs.forEach((itemJ, j) => {
-        var data = itemJ.split('=');
-        var tmp = this.state.a;
-        tmp = tmp.push({ idx:i, key:data[0], value:data[1] });
-        this.setState({ a:tmp });
+        var keyVal = itemJ.split('=');
+        var obj = {}
+        obj.i = i;
+        obj[keyVal[0]] = keyVal[1];
+        this.setState({ a:this.state.a.push(obj) });
       });
     });
     console.log('array', this.state.a);
