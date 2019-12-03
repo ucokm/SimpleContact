@@ -6,7 +6,7 @@ import {
 } from 'react-native';
 import { isEmpty } from 'lodash';
 
-import Dashboard from './src/screen/Dashboard';
+import Soal1 from './src/screen/Soal1';
 
 const API_GET_CONTACT = 'https://simple-contact-crud.herokuapp.com/contact';
 
@@ -38,13 +38,7 @@ class App extends Component {
   render() {
     return(
       <View>
-        <Text>Contact List:</Text>
-        {
-          this.state.isLoading ?
-          <ActivityIndicator size="large"/> :
-          null
-        }
-        <Dashboard dataSource={this.state.dataSource} />
+        <Soal1/>
       </View>
     )
   }
