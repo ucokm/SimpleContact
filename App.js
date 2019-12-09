@@ -6,7 +6,7 @@ import {
 } from 'react-native';
 import { isEmpty } from 'lodash';
 
-import Soal1 from './src/screen/Soal1';
+import Soal2 from './src/screen/Soal2';
 
 const API_GET_CONTACT = 'https://simple-contact-crud.herokuapp.com/contact';
 
@@ -38,7 +38,7 @@ class App extends Component {
   render() {
     return(
       <View>
-        <Soal1/>
+        <Soal2/>
       </View>
     )
   }
